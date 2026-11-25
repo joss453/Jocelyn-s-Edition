@@ -146,6 +146,17 @@
 
 
 #music-toggle{position:fixed;z-index:100;right:24px;bottom:24px;bottom:calc(24px + env(safe-area-inset-bottom));width:42px;height:42px;padding:10px;border:1px solid #D7C2A4;border-radius:50%;background:#F7F4EE;color:#8c7355;cursor:pointer;display:grid;place-items:center}#music-toggle[hidden]{display:none}#music-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}#music-toggle .muted-mark{display:none}#music-toggle[aria-pressed="true"] .muted-mark{display:block}
+
+/* Indicación de navegación: sin flechas ni botones adicionales. */
+.page:not(#page-envelope):not(#page-thanks){padding-bottom:max(90px,calc(76px + env(safe-area-inset-bottom)));}
+.page > .advance-hint{position:absolute;left:50%;bottom:max(34px,calc(24px + env(safe-area-inset-bottom)));transform:translateX(-50%);z-index:3;width:max-content;max-width:calc(100% - 112px);color:var(--wine);font:italic 19px/1.15 "Cormorant Garamond",Georgia,serif;text-align:center;cursor:pointer;padding:8px 0;touch-action:manipulation;}
+.advance-hint::before{content:"";display:block;width:34px;height:1px;background:var(--champagne);margin:0 auto 7px;}
+.advance-hint .desktop-hint{display:none;}
+@media (hover:hover) and (pointer:fine){.advance-hint .mobile-hint{display:none}.advance-hint .desktop-hint{display:inline}}
+#page-envelope .letter .advance-hint{display:none;}
+#page-envelope .open-hint{font-weight:500;}
+@media(max-height:580px){.page > .advance-hint{bottom:20px;font-size:17px}.page:not(#page-envelope):not(#page-thanks){padding-bottom:72px}.video-wrap{height:42dvh}.timeline{height:43dvh}}
+
 </style>
   
   
@@ -161,7 +172,7 @@
      <div class="seal">
       <span class="seal-initial">J</span>
      </div>
-     <p class="open-hint">Toca para abrir</p>
+     <p class="open-hint">Toca el sobre para abrir</p>
     </div>
    </section>
    <section id="page-invitation" class="page canva-section" aria-label="Invitación principal" tabindex="0">
@@ -176,7 +187,9 @@
      <p class="date canva-text reveal" style="--delay:.67s">9 de diciembre de 2026</p>
      <p class="invitation-close canva-text reveal" style="--delay:.8s">Me encantará compartir contigo este momento tan especial.</p>
     </div>
-   </section>
+   
+    <p class="advance-hint"><span class="mobile-hint">Toca aquí para avanzar</span><span class="desktop-hint">Haz clic aquí para avanzar</span></p>
+</section>
    <section id="page-video" class="page canva-section" aria-label="Video personal" tabindex="0">
     <div class="frame"></div>
     <div class="content">
@@ -191,7 +204,9 @@
       </div>
      </div>
     </div>
-   </section>
+   
+    <p class="advance-hint"><span class="mobile-hint">Toca aquí para avanzar</span><span class="desktop-hint">Haz clic aquí para avanzar</span></p>
+</section>
    <section id="page-itinerary" class="page canva-section" aria-label="Detalles de la celebración" tabindex="0">
     <div class="frame"></div>
     <h2 class="page-title">Detalles de la
@@ -216,7 +231,9 @@
       <p class="event-label canva-text">Pastel</p>
      </div>
     </div>
-   </section>
+   
+    <p class="advance-hint"><span class="mobile-hint">Toca aquí para avanzar</span><span class="desktop-hint">Haz clic aquí para avanzar</span></p>
+</section>
    <section id="page-location" class="page canva-section" aria-label="Ubicación" tabindex="0">
     <div class="frame"></div>
     <div class="content">
@@ -230,7 +247,9 @@
      </div>
      <a id="maps-link" class="action-link canva-button reveal" style="--delay:.65s" href="https://maps.app.goo.gl/QUPJvcUi3eRo9wJn8" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
     </div>
-   </section>
+   
+    <p class="advance-hint"><span class="mobile-hint">Toca aquí para avanzar</span><span class="desktop-hint">Haz clic aquí para avanzar</span></p>
+</section>
    <section id="page-dress" class="page canva-section" aria-label="Código de vestimenta" tabindex="0">
     <div class="frame"></div>
     <div class="content">
@@ -240,7 +259,9 @@
      <p class="dress-lead canva-text reveal" style="--delay:.46s">Te invitamos a vestir de manera presentable.</p>
      <p class="dress-copy canva-text reveal" style="--delay:.62s">Por favor, evita vestir de rojo, beige, café y blanco, ya que estos colores estarán reservados para la festejada.</p>
     </div>
-   </section>
+   
+    <p class="advance-hint"><span class="mobile-hint">Toca aquí para avanzar</span><span class="desktop-hint">Haz clic aquí para avanzar</span></p>
+</section>
    <section id="page-rsvp" class="page canva-section" aria-label="Confirmación de asistencia" tabindex="0">
     <div class="frame"></div>
     <div class="content">
@@ -252,7 +273,9 @@
      <p class="rsvp-copy canva-text reveal" style="--delay:.5s">Me encantará contar con tu presencia y compartir contigo este día tan especial.</p>
      <a id="whatsapp-link" class="action-link canva-button reveal" style="--delay:.68s" href="https://wa.me/524779155034?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20celebraci%C3%B3n%20de%20los%2018%20a%C3%B1os%20de%20Jocelyn%20el%209%20de%20diciembre." target="_blank" rel="noopener noreferrer">Confirmar asistencia</a>
     </div>
-   </section>
+   
+    <p class="advance-hint"><span class="mobile-hint">Toca aquí para avanzar</span><span class="desktop-hint">Haz clic aquí para avanzar</span></p>
+</section>
    <section id="page-thanks" class="page canva-section" aria-label="Agradecimiento final" tabindex="0">
     <div class="frame"></div>
     <div class="content">
